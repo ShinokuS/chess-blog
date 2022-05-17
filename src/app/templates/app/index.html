@@ -1,0 +1,138 @@
+﻿{% extends "app/layout.html" %}
+{% load staticfiles %}
+{% block content %}
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+
+    <ol class="carousel-indicators">
+
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+
+        <div class="item active">
+
+            <img src="{% static 'app/content/banner1.jpg'%} " width=100% height=100% alt="Первый слайд" class="img-responsive"/>
+
+            <div class="carousel-caption" role="option">
+
+                <p>
+
+                    Магнус Карлсен - действующий чемпион мира
+
+                    <a class="btn btn-default" href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D0%BB%D1%81%D0%B5%D0%BD,_%D0%9C%D0%B0%D0%B3%D0%BD%D1%83%D1%81">
+
+                        Читать далее
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="item">
+
+            <img src="{% static 'app/content/banner2.jpg'%}" width=100% height=100% alt="Второй слайд" class="img-responsive"/>
+
+            <div class="carousel-caption" role="option">
+
+                <p>
+
+                    Бобби Фишер - одиннадцатый чемпион мира по шахматам
+
+                    <a class="btn btn-default" href="https://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D1%88%D0%B5%D1%80,_%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82_%D0%94%D0%B6%D0%B5%D0%B9%D0%BC%D1%81">
+
+                        Читать далее
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="item">
+
+            <img src=" {% static 'app/content/banner3.jpg'%} " width=100% height=100% alt="Третий слайд" class="img-responsive"/>
+
+            <div class="carousel-caption" role="option">
+
+                <p>
+
+                    Хосе Рауль Капабланка - третий чемпион мира по шахматам
+
+                    <a class="btn btn-default" href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BF%D0%B0%D0%B1%D0%BB%D0%B0%D0%BD%D0%BA%D0%B0,_%D0%A5%D0%BE%D1%81%D0%B5_%D0%A0%D0%B0%D1%83%D0%BB%D1%8C">
+
+                        Читать далее
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+
+        <span class="sr-only">Пред</span>
+
+    </a>
+
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+
+        <span class="sr-only">След</span>
+
+    </a>
+
+</div>
+
+
+<div class="jumbotron">
+    <h1>Шахматы - игра, объединяющая поколения</h1>
+    <p class="lead">Шахматы – настольная логическая игра для двух человек 
+        со специальными фигурами и 64-клеточным полем. Шахматы сочетающая в себе 
+        элементы искусства (в части шахматной композиции), науки и спорта. Как вид спорта, шахматы 
+        имеют иерархию званий, развитую систему регулярных турниров, национальные и международные лиги.
+       </p>
+    <p><a href="https://ru.wikipedia.org/wiki/%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D1%88%D0%B0%D1%85%D0%BC%D0%B0%D1%82" class="btn btn-primary btn-large">Читать далее &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2 style="color: white;">Дебют</h2>
+        <p style="color: white;">
+            Начальная стадия шахматной партии, характеризуется мобилизацией сил играющих. 
+        </p>
+        <p><a class="btn btn-default" href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%B1%D1%8E%D1%82_(%D1%88%D0%B0%D1%85%D0%BC%D0%B0%D1%82%D1%8B)">Научиться играть! &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2 style="color: white;">Миттельшпиль</h2>
+        <p style="color: white;">Следующая за дебютом стадия шахматной партии, в которой, как правило, развиваются основные события в шахматной борьбе — 
+            атака и защита, позиционное маневрирование, комбинации и жертвы.</p>
+        <p><a class="btn btn-default" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D1%82%D1%82%D0%B5%D0%BB%D1%8C%D1%88%D0%BF%D0%B8%D0%BB%D1%8C">Научиться играть! &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2 style="color: white;">Эндшпиль</h2>
+        <p style="color: white;">Заключительная часть шахматной или шашечной партии, после того как большинство фигур были разменяны.</p>
+        <p><a class="btn btn-default" href="https://ru.wikipedia.org/wiki/%D0%AD%D0%BD%D0%B4%D1%88%D0%BF%D0%B8%D0%BB%D1%8C">Научиться играть! &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}

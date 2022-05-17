@@ -1,0 +1,16 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h1 style="color: white;">{{ title }}</h1>
+<hr />
+<div>
+        <h2 style="color: white;">История шахмат</h2>
+        <VIDEO src="/media/video1.mp4" controls="controls" width="400" height="300" poster="/media/poster1.png"></VIDEO>
+</div>
+<hr />
+<div>
+    <h2 style="color: white;">Школа шахмат Гарри Каспарова</h2>
+    <VIDEO src="/media/video2.mp4" controls="controls" width="400" height="300" poster="/media/poster2.png"></VIDEO>
+</div>
+{% endblock %}

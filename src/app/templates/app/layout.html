@@ -1,0 +1,65 @@
+﻿
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - MyChess</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}"/>
+    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+    <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+
+    <style>
+        body {
+            background: url("{% static 'app/content/background.jpg' %}") no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand"> <img src="{% static 'app/content/logo.png' %} " width="20" alt="logo"/></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{% url 'play' %}">Играть</a></li>
+                <li><a href="{% url 'blog' %}">Блог</a></li>
+                <li><a href="{% url 'videopost' %}">Видео</a></li>
+                <li><a href="{% url 'about' %}">О нас</a></li>
+                <li><a href="{% url 'contact' %}">Контакты</a></li>
+                <li><a href="{% url 'anketa' %}">Анкета</a></li>
+                <li><a href="{% url 'links' %}"> Полезные ресурсы</a></li>
+                {% if not user.is_authenticated %}
+                <li><a href="{% url 'registration' %}">Регистрация</a></li>
+                {% endif %}
+                {% if user.is_superuser %}
+                <li><a href="{% url 'newpost' %}"> Добавить статью </a></li>
+                {% endif %}
+            </ul>
+            {% include 'app/loginpartial.html' %}
+        </div>
+    </div>
+</div>
+
+<div class="container body-content">
+    {% block content %}{% endblock %}
+    <hr/>
+    <footer>
+        <p style="color: white;">&copy; {{ year }} - MyChess Corporation</p>
+    </footer>
+</div>
+
+
+<script src="{% static 'app/scripts/bootstrap.js' %}"></script>
+<script src="{% static 'app/scripts/respond.js' %}"></script>
+{% block scripts %}{% endblock %}
+
+</body>
+</html>
